@@ -1,0 +1,60 @@
+body {
+	background: url('images/climbingrainier.png') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0;
+}
+
+.info {
+	font-weight: bolder;
+	font-size: 30px;
+	color: black;
+}
+
+.info a {
+	color: maroon;
+}
+
+.contact{
+	height: 50px;
+	min-width: 100%;
+	background: rgba(0,0,0,0.1);
+	text-align: center;
+	clear: both;
+}
+
+.contact img{
+	float: right;
+	padding: 7px 30px 7px 0px;
+}
+
+.about {
+	background-color: rgba(0,0,0,0.5);
+	text-align: center;
+	width: 50%;
+	color: rgba(225,225,225,0.7);
+	padding: 5%;
+	clear: both;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.about p {
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.foot{
+	height: 50px;
+	min-width: 100%;
+	background: rgba(0,0,0,0.1);
+	text-align: center;
+	clear: both;
+}
+
+.foot img{
+	float: left;
+	padding: 7px 30px 7px 0px;
+}
