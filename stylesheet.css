@@ -68,23 +68,23 @@ body {
 .github{
         width: 48px;
         height: 48px;
-        background: url(file:///Users/richardlucas/richardalucas.com/images/sprites.png) 0 0;
+        background: url("images/sprites.png") 0 0;
 }
 
 .twitter{
         width: 48px;
         height: 48px;
-        background: url(file:///Users/richardlucas/richardalucas.com/images/sprites.png) 48px 0px;
+        background: url("images/sprites.png") 48px 0px;
 }
 
 .linkedin{
         width: 48px;
         height: 48px;
-        background: url(file:///Users/richardlucas/richardalucas.com/images/sprites.png) 106px 0px;
+        background: url("images/sprites.png") 106px 0px;
 }
 
 .email{
         width: 48px;
         height: 48px;
-        background: url(file:///Users/richardlucas/richardalucas.com/images/sprites.png) 164px 0px;
+        background: url("images/sprites.png") 164px 0px;
 }
