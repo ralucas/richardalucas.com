@@ -10,7 +10,7 @@ body {
 .info {
 	font-weight: bolder;
 	font-size: 30px;
-	color: black;
+	color: rgba(225,225,225,0.7);
 }
 
 .info a {
@@ -57,4 +57,34 @@ body {
 .foot img{
 	float: left;
 	padding: 7px 30px 7px 0px;
+}
+
+.css-sprites li{
+        margin: 5px;
+        list-style: none;
+        display: inline-block;
+}
+
+.github{
+        width: 48px;
+        height: 48px;
+        background: url(file:///Users/richardlucas/richardalucas.com/images/sprites.png) 0 0;
+}
+
+.twitter{
+        width: 48px;
+        height: 48px;
+        background: url(file:///Users/richardlucas/richardalucas.com/images/sprites.png) 48px 0px;
+}
+
+.linkedin{
+        width: 48px;
+        height: 48px;
+        background: url(file:///Users/richardlucas/richardalucas.com/images/sprites.png) 106px 0px;
+}
+
+.email{
+        width: 48px;
+        height: 48px;
+        background: url(file:///Users/richardlucas/richardalucas.com/images/sprites.png) 164px 0px;
 }
