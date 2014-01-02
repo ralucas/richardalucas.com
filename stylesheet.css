@@ -1,5 +1,5 @@
 body {
-	background: url('images/climbingrainier.png') no-repeat center center fixed; 
+	background: url('images/dist/climbingrainier.png') no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -64,23 +64,23 @@ body {
 .github{
         width: 48px;
         height: 48px;
-        background: url("images/sprites.png") 0 0;
+        background: url("images/dist/sprites.png") 0 0;
 }
 
 .linkedin{
         width: 48px;
         height: 48px;
-        background: url("images/sprites.png") 48px 0px;
+        background: url("images/dist/sprites.png") 48px 0px;
 }
 
 .twitter{
         width: 48px;
         height: 48px;
-        background: url("images/sprites.png") 106px 0px;
+        background: url("images/dist/sprites.png") 106px 0px;
 }
 
 .email{
         width: 48px;
         height: 48px;
-        background: url("images/sprites.png") 164px 0px;
+        background: url("images/dist/sprites.png") 164px 0px;
 }

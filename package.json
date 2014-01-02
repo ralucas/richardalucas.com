@@ -1,0 +1,9 @@
+{
+  "name": "richardalucas.com",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-ftp-deploy": "~0.1.1",
+    "grunt-contrib-cssmin": "~0.7.0"
+  }
+}
