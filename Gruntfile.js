@@ -56,4 +56,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', ['cssmin', 'imagemin']);
 
 	grunt.registerTask('deploy', ['ftp-deploy']);
+
+	grunt.registerTask('default', ['build', 'deploy']);
 };
