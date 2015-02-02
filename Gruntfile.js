@@ -92,5 +92,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('deploy', ['git', 'ftp-deploy']);
 
-  grunt.registerTask('default', ['build', 'git', 'deploy']);
+  grunt.registerTask('default', ['build', 'deploy']);
 };
