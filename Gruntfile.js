@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+  require('load-grunt-tasks')(grunt);
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		cssmin: {
@@ -44,16 +46,30 @@ module.exports = function(grunt) {
 					'/Users/richardlucas/Projects/richardalucas.com/.git']
 			}
 		},
+    gitadd: {
+      task: {
+        options: {
+          cwd: '/Users/richardlucas/Projects/richardalucas.com'
+        },
+        files: {
+          src: ['css/fonts/*', 'css/stylesheet.css', 'images/src/*', 'Gruntfile.js', 'index.html', 'package.json', 'README.md']
+        }
+      }
+    },
 		gitcommit: {
-			task: {
+			repo: {
 				options: {
-					message: grunt.option('m')
+					message: 'Updated website'
 				}
-			},
-			files: {
-				src: ''
 			}
 		},
+    gitpush: {
+      repo: {
+        options: {
+          remote: 'origin'
+        }
+      }
+    },
     autoprefixer: {
       options: {
         browsers: ['last 2 versions', 'ie 8', 'ie 9']
@@ -66,16 +82,13 @@ module.exports = function(grunt) {
           dest: 'css'
         }]
       }
-    }
+    },
+    clean: ['images/dist', 'css/stylesheet.min.js']
 	});
-	
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
-	grunt.loadNpmTasks('grunt-ftp-deploy');
-	grunt.loadNpmTasks('grunt-git');
-  grunt.loadNpmTasks('grunt-autoprefixer')
 
-	grunt.registerTask('build', ['autoprefixer','cssmin', 'imagemin']);
+	grunt.registerTask('build', ['clean', 'autoprefixer','cssmin', 'imagemin']);
+
+  grunt.registerTask('git', ['gitadd', 'gitcommit', 'gitpush']);
 
 	grunt.registerTask('deploy', ['ftp-deploy']);
 

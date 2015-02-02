@@ -4,9 +4,11 @@
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-autoprefixer": "^2.2.0",
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-imagemin": "^0.8.1",
     "grunt-ftp-deploy": "~0.1.1",
-    "grunt-git": "^0.2.7"
+    "grunt-git": "^0.3.3",
+    "load-grunt-tasks": "^3.1.0"
   }
 }
