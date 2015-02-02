@@ -7,11 +7,8 @@ module.exports = function(grunt) {
 				banner: '/* Minified CSS File - <%= grunt.template.today("yyyy-mm-dd") %> */'
 			},
 			minify: {
-				expand: true,
-				cwd: '',
-				src: '*.css',
-				dest: '',
-				ext: '.min.css'
+				src: 'css/stylesheet.css',
+				dest: 'css/stylesheet.min.css'
 			}
 		},
 		imagemin: {
@@ -30,12 +27,12 @@ module.exports = function(grunt) {
 		'ftp-deploy': {
 			build: {
 				auth: {
-					host: 'rangeandroam.com',
+					host: 'ftp.rangeandroam.com',
 					port: 21,
 					authKey: 'key'
 				},
 				src: '/Users/richardlucas/Projects/richardalucas.com',
-				dest: '/richardalucas.com',
+				dest: '/public_html/richardalucas.com',
 				exclusions: ['/Users/richardlucas/Projects/richardalucas.com/**/.DS_Store',
 					'/Users/richardlucas/Projects/richardalucas.com/images/src',
 					'/Users/richardlucas/Projects/richardalucas.com/stylesheet.css',
@@ -56,15 +53,29 @@ module.exports = function(grunt) {
 			files: {
 				src: ''
 			}
-		}
+		},
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'css',
+          src: 'stylesheet.css',
+          dest: 'css'
+        }]
+      }
+    }
 	});
 	
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-ftp-deploy');
 	grunt.loadNpmTasks('grunt-git');
+  grunt.loadNpmTasks('grunt-autoprefixer')
 
-	grunt.registerTask('build', ['cssmin', 'imagemin']);
+	grunt.registerTask('build', ['autoprefixer','cssmin', 'imagemin']);
 
 	grunt.registerTask('deploy', ['ftp-deploy']);
 

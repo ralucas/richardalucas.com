@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('fonts/raleway-thin.woff') format('woff'),
+    url('fonts/raleway-thin.eot') format('embedded-opentype'),
+    url('fonts/raleway-thin.ttf') format('truetype'),
+    url('fonts/raleway-thin.svg') format('svg');
+}
+
+body {
+	background: url('//res.cloudinary.com/dgfchlycf/image/upload/v1422848151/climbingrainier_jmwu35.png') no-repeat center center fixed;
+	background-size: cover;
+	margin: 0;
+}
+
+h1, h2, h3, h4, p, a {
+  font-family: Raleway;
+}
+
+.info {
+	font-weight: bolder;
+	font-size: 30px;
+	color: rgba(225,225,225,0.7);
+}
+
+.contact{
+	height: 50px;
+	min-width: 100%;
+	background: rgba(0,0,0,0.1);
+	text-align: center;
+	clear: both;
+}
+
+.contact img{
+	float: right;
+	padding: 7px 30px 7px 0px;
+}
+
+.about {
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+	width: 50%;
+	color: rgba(225,225,225,0.7);
+	padding: 5%;
+	clear: both;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.about p {
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.foot{
+	height: 50px;
+	min-width: 100%;
+	background: rgba(0,0,0,0.5);
+	text-align: center;
+	clear: both;
+}
+
+.foot img{
+	float: left;
+	padding: 7px 30px 7px 0px;
+}
+
+.css-sprites li{
+  margin: 5px;
+  list-style: none;
+  display: inline-block;
+}
+
+.sprite {
+  width: 48px;
+  height: 48px;
+}
+
+.github{
+  background: url("../images/dist/sprites.png") 0 0;
+}
+
+.linkedin{
+  background: url("../images/dist/sprites.png") 48px 0px;
+}
+
+.twitter{
+  background: url("../images/dist/sprites.png") 106px 0px;
+}
+
+.email{
+  background: url("../images/dist/sprites.png") 164px 0px;
+}
