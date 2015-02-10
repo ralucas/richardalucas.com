@@ -7,13 +7,15 @@
 }
 
 body {
-	background: url('//res.cloudinary.com/dgfchlycf/image/upload/v1422848151/climbingrainier_jmwu35.png') no-repeat center center fixed;
-	background-size: cover;
 	margin: 0;
 }
 
 h1, h2, h3, h4, p, a {
   font-family: Raleway;
+}
+
+a {
+  color: #04ACF5 !important;
 }
 
 .info {
