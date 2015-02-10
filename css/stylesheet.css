@@ -18,6 +18,10 @@ a {
   color: #04ACF5 !important;
 }
 
+.container {
+  display: none;
+}
+
 .info {
 	font-weight: bolder;
 	font-size: 30px;
