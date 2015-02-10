@@ -43,7 +43,8 @@ module.exports = function(grunt) {
           '/Users/richardlucas/Projects/richardalucas.com/.ftppass',
           '/Users/richardlucas/Projects/richardalucas.com/package.json',
           '/Users/richardlucas/Projects/richardalucas.com/README.md',
-          '/Users/richardlucas/Projects/richardalucas.com/.git']
+          '/Users/richardlucas/Projects/richardalucas.com/.git'],
+        forceVerbose: true
       }
     },
     gitadd: {
@@ -96,5 +97,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('deploy', ['ftp-deploy']);
 
-  grunt.registerTask('default', ['build', 'deploy']);
+  grunt.registerTask('default', ['build', 'git', 'deploy']);
 };
