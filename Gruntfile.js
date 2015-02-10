@@ -49,24 +49,28 @@ module.exports = function(grunt) {
     gitadd: {
       task: {
         options: {
-          cwd: '/Users/richardlucas/Projects/richardalucas.com'
+          cwd: '/Users/richardlucas/Projects/richardalucas.com',
+          verbose: true
         },
         files: {
-          src: ['css/fonts/*', 'css/style', 'images/src/*', 'Gruntfile.js', 'index.html', 'package.json', 'README.md', 'js/*']
+          cwd: '/Users/richardlucas/Projects/richardalucas.com',
+          src: ['.']
         }
       }
     },
     gitcommit: {
-      repo: {
+      task: {
         options: {
-          message: 'Updated website'
+          message: 'Updated website',
+          verbose: true
         }
       }
     },
     gitpush: {
-      repo: {
+      task: {
         options: {
-          remote: 'origin'
+          remote: 'origin',
+          verbose: true
         }
       }
     },
@@ -90,7 +94,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('git', ['gitadd', 'gitcommit', 'gitpush']);
 
-  grunt.registerTask('deploy', ['git', 'ftp-deploy']);
+  grunt.registerTask('deploy', ['ftp-deploy']);
 
   grunt.registerTask('default', ['build', 'deploy']);
 };
