@@ -52,7 +52,7 @@ module.exports = function(grunt) {
           cwd: '/Users/richardlucas/Projects/richardalucas.com'
         },
         files: {
-          src: ['css/fonts/*', 'css/style', 'images/src/*', 'Gruntfile.js', 'index.html', 'package.json', 'README.md']
+          src: ['css/fonts/*', 'css/style', 'images/src/*', 'Gruntfile.js', 'index.html', 'package.json', 'README.md', 'js/*']
         }
       }
     },

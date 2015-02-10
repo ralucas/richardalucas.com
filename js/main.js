@@ -1,0 +1,1 @@
+$.backstretch('images/dist/climbingrainier.png');
