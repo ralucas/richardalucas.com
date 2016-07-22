@@ -4,13 +4,14 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    dist: 'dist',
     cssmin: {
       options: {
         banner: '/* Minified CSS File - <%= grunt.template.today("yyyy-mm-dd h:MM:ss TT") %> */'
       },
       minify: {
         src: 'css/stylesheet.css',
-        dest: 'css/stylesheet.min.css'
+        dest: '<%= dist %>/css/stylesheet.min.css'
       }
     },
     imagemin: {
@@ -22,10 +23,11 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'images/src/',
           src: '**/*.png',
-          dest: 'images/dist/'
+          dest: '<%= dist %>/images/'
         }]
       }
     },
+
     'ftp-deploy': {
       build: {
         auth: {
@@ -33,17 +35,9 @@ module.exports = function(grunt) {
           port: 21,
           authKey: 'key'
         },
-        src: '/Users/richardlucas/Projects/richardalucas.com',
+        src: '/Users/richardlucas/Projects/richardalucas.com/dist',
         dest: '/public_html/richardalucas.com',
-        exclusions: ['/Users/richardlucas/Projects/richardalucas.com/**/.DS_Store',
-          '/Users/richardlucas/Projects/richardalucas.com/images/src',
-          '/Users/richardlucas/Projects/richardalucas.com/stylesheet.css',
-          '/Users/richardlucas/Projects/richardalucas.com/Gruntfile.js',
-          '/Users/richardlucas/Projects/richardalucas.com/node_modules',
-          '/Users/richardlucas/Projects/richardalucas.com/.ftppass',
-          '/Users/richardlucas/Projects/richardalucas.com/package.json',
-          '/Users/richardlucas/Projects/richardalucas.com/README.md',
-          '/Users/richardlucas/Projects/richardalucas.com/.git'],
+        exclusions: [],
         forceVerbose: true
       }
     },
@@ -88,7 +82,7 @@ module.exports = function(grunt) {
         }]
       }
     },
-    clean: ['images/dist', 'css/stylesheet.min.css']
+    clean: ['dist/']
   });
 
   grunt.registerTask('build', ['clean', 'autoprefixer','cssmin', 'imagemin']);
