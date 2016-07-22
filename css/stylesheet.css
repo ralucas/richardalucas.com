@@ -26,6 +26,10 @@ body {
   font-family: Ubuntu-Mono, sans-serif;
 }
 
+h1, h2, h3, h4, h5, a, p {
+  font-family: Ubuntu-Mono, sans-serif;
+}
+
 a {
   color: #04ACF5 !important;
 }
@@ -97,21 +101,21 @@ ul {
 }
 
 .github{
-  background: url("../images/dist/sprites.png") 0 0;
+  background: url("../images/sprites.png") 0 0;
 }
 
 .linkedin{
-  background: url("../images/dist/sprites.png") 48px 0px;
+  background: url("../images/sprites.png") 48px 0px;
 }
 
 .twitter{
-  background: url("../images/dist/sprites.png") 106px 0px;
+  background: url("../images/sprites.png") 106px 0px;
 }
 
 .email{
-  background: url("../images/dist/sprites.png") 164px 0px;
+  background: url("../images/sprites.png") 164px 0px;
 }
 
 .npm {
-  background: url("../dist/images/npm-transparent.png");
+  background: url("../images/npm-transparent.png");
 }

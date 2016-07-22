@@ -22,12 +22,35 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'images/src/',
-          src: '**/*.png',
+          src: '**/*.*',
           dest: '<%= dist %>/images/'
         }]
       }
     },
-
+    copy: {
+      js: {
+        expand: true,
+        cwd: 'js/',
+        src: '**/*.js',
+        dest: '<%= dist %>/js/'
+      },
+      css: {
+        expand: true,
+        cwd: 'css/vendor',
+        src: '*.css',
+        dest: '<%= dist %>/css/vendor/' 
+      },
+      fonts: {
+        expand: true,
+        cwd: 'css/fonts',
+        src: '*.*',
+        dest: '<%= dist %>/css/fonts/' 
+      },
+      index: {
+        src: 'index.html',
+        dest: 'dist/'
+      }
+    },
     'ftp-deploy': {
       build: {
         auth: {
@@ -85,7 +108,7 @@ module.exports = function(grunt) {
     clean: ['dist/']
   });
 
-  grunt.registerTask('build', ['clean', 'autoprefixer','cssmin', 'imagemin']);
+  grunt.registerTask('build', ['clean', 'autoprefixer','cssmin', 'imagemin', 'copy']);
 
   grunt.registerTask('git', ['gitadd', 'gitcommit', 'gitpush']);
 
